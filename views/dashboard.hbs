@@ -15,9 +15,10 @@
 
   <h2>{{title}}</h2>
   {{#if length}}
-  <h1>Your Company History</h1>
+  <h4>Your Company History:</h4>
   <ul>
     {{#each blog}}
+    
     <li>Company Name: {{this.title}}
       <br>
       Work Profile: {{this.body}}
@@ -34,7 +35,7 @@
     <a href='/create/blog'><button>Add New Company</button></a>
   </ul>
   {{else}}
-  <h1>Hey {{name}}. Add your new company which you are working currently <a href='/create/blog'>here</a></h1>
+  <h5>welcome {{name}}. Add your company details  <a href='/create/blog'>here</a></h5>
   {{/if}}
 </body>
 

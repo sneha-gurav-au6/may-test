@@ -17,22 +17,24 @@
     </div>
   </div>
  
-  
-  <table class="table table-hover">
+  <div style="position: absolute;right:0px ; ">
+    
+    <button type="lg button" class="btn btn-warning btn-sm"><a href="/user/dashboard">check company history</a> </button>
+  </div>
+  <br><br>
+  <table >
 
     <thead>
       <tr>
-      
-        <th scope="col"> Company Name</th>
-      </tr>
+        <th scope="col"><h6>Companies...</h6> </th>
+        </tr>
     </thead>
     {{#each title}}
-    <br>
+    
     <tbody>
-      <tr class="table">
-        <td> <a href="/company/details/{{this._id}}">{{this.title}}</a> </td>
-      </tr>
-
+      
+        <td> <a href="/company/details/{{this._id}}"><h6>{{this.title}}</h6></a></td>
+    
 
     </tbody>
   </table>

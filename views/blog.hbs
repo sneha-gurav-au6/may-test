@@ -8,13 +8,20 @@
 </head>
 
 <body>
+  <form action="/user/logout?crud=DELETE" method="post">
+    <input type="submit" value="Log Out">
+  </form>
   <br>
+  
+  <h3>Add details:</h3>
   <br>
   <br>
   <form action="/create/blog" method="post">
-    <input type="text" name="title" placeholder="Company Name">
-    <input type="text" name="body" placeholder="Your Work Profile">
-    <h5>Add your Joining Date</h5>
+  <h6>Company name:</h6>
+    <input type="text" name="title" ><br><br>
+  <h6>work profile:</h6>  
+    <input type="text" name="body" ><br><br>
+    <h6>Enter Joining Date</h6>
     <input type="date" name="date" placeholder="Joining Date">
     <br>
     <br>

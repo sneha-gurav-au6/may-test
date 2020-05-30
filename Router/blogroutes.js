@@ -120,18 +120,15 @@ routes.delete("/user/logout", authenticate, function (req, res) {
 
 routes.get("/company/details/:id", async (req, res) => {
   var id = req.params.id
-  // var eIIId = []
-  // console.log(id)
+ 
   var data = await Blog.findById(id)
-  // var eid = data.employee
-  // console.log(eid)
+ 
   var eid = data.employee[0]
   var isd = await User.findById(
     eid
   )
   console.log(isd)
-  // eIIId.push(eid)
-  // console.log(eid)
+
 
   res.render("company", {
     data1: data.title,
@@ -139,13 +136,7 @@ routes.get("/company/details/:id", async (req, res) => {
     email: isd.email
 
   })
-  // console.log(data)
-  // User.find(id)
 
-  // res.send("hello")
-
-
-  // console.log(eIIId)
 
 })
 module.exports = routes;
