@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <br>
+  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+    <button type="lg-button" class="btn btn-warning btn-sm"> <a href="/user/register">Sign up</a> </button>&nbsp;
+    <button type="lg button" class="btn btn-warning btn-sm"><a href="/user/login">Sign in</a> </button>
+    <div class="btn-group" role="group">
+    </div>
+  </div>
+ 
+  
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+      
+        <th scope="col"> Company Name</th>
+      </tr>
+    </thead>
+    {{#each title}}
+    <br>
+    <tbody>
+      <tr class="table">
+        <td> <a href="/company/details/{{this._id}}">{{this.title}}</a> </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+  {{/each}}
+
+</body>
+
+</html>

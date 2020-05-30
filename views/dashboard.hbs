@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="/create/blog">Add your new Company</a>
+  <form action="/user/logout?crud=DELETE" method="post">
+    <input type="submit" value="Log Out">
+  </form>
+
+  <h2>{{title}}</h2>
+  {{#if length}}
+  <h1>Your Company History</h1>
+  <ul>
+    {{#each blog}}
+    <li>Company Name: {{this.title}}
+      <br>
+      Work Profile: {{this.body}}
+      <br>
+      Joining Date: {{this.date}}
+      <br>
+      <a href="/blog/update/{{this.id}}"><button>Edit</button></a>
+      <form action={{blogupdate}} method="POST">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
+    {{/each}}
+    <br>
+    <a href='/create/blog'><button>Add New Company</button></a>
+  </ul>
+  {{else}}
+  <h1>Hey {{name}}. Add your new company which you are working currently <a href='/create/blog'>here</a></h1>
+  {{/if}}
+</body>
+
+</html>
